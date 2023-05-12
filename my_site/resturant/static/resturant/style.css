@@ -1,0 +1,25 @@
+h1 {
+    color: #FF8C00;
+    font-size: 48px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #008CBA;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #005266;
+  }
+  

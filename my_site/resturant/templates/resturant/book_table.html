@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book a table at {{ restaurant.name }}</title>
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'resturant/style.css' %}">
+  </head>
+  <body>
+    <h1>Book a table at {{ restaurant.name }}</h1>
+    <p>Choose an available time slot:</p>
+    <ul>
+      {% for time_slot in time_slots %}
+      <li>{{ time_slot.start_time }} - {{ time_slot.end_time }} (<a href="{% url 'view_menu' restaurant.id %}">view menu</a>)</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
