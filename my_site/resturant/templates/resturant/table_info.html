@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Information</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Table Information</h1>
+    <form id="tableForm" method="POST">
+      <div class="mb-3">
+        <label for="tableName" class="form-label">Table Name</label>
+        <input type="text" class="form-control" id="tableName" name="name" >
+      </div>
+      <div class="mb-3">
+        <label for="tableCount" class="form-label">Number of Tables</label>
+        <input type="number" class="form-control" id="tableCount"  name ='number' >
+      </div>
+      <div class="mb-3">
+        <label for="tableCapacity" class="form-label">Capacity of Table</label>
+        <input type="number" class="form-control" id="tableCapacity" step="0.01" name ="capacity" >
+      </div>
+      <div class="mb-3">
+        <label for="tablePrice" class="form-label">Price per Table</label>
+        <input type="number" class="form-control" id="tablePrice" step="0.01" name ="price" >
+      </div>
+      <button type ="button" class="btn btn-primary" id = 'click'>Add Entry</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <hr>
+
+    <h2>Table Entries</h2>
+    <table id="tableEntries" class="table">
+      <thead>
+        <tr>
+          <th>Table Name</th>
+          <th>Number of Tables</th>
+          <th>Price per Table</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    restaurant_id = document.getElementById('tableForm').dataset.restaurant_id
+    function saveEntries(){
+        let entries =[];
+        let rows = document.getElementById('tableEntries').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        for(let i=0;i<rows.length;i++){
+          let row = rows[i];
+          var tableName = row.cells[0].innerText;
+          var tableCount = row.cells[1].innerText;
+          var tableCapacity = row.cells[2].innerText;
+          var tablePrice = row.cells[3].innerText;
+          
+          entries.push({
+            name : tableName,
+            count : tableCount,
+            capacity : tableCapacity,
+            price : tablePrice
+          })
+        }
+        $.ajax({
+          url : '{% url "table_info" restaurant_id=restaurant.id %}',
+          type : 'POST',
+          data : JSON.stringify(entries),
+          contentType : 'application/json',
+          success: function(response){
+            if(response.success){
+              alert("Your entries are saved successfully");
+              document.getElementById('tableEntries').getElementsByTagName('tbody')[0].innerText = ""
+            }else{
+              alert("Failed to save table Entries try again")
+            }
+          },
+          error : function(xhr,status,error){
+            alert.error("error in recieving data from ajax")
+            console.log(error)
+          }
+        });
+      }
+    document.getElementById('tableForm').addEventListener('submit',(e)=>{
+      if(document.getElementById('tableName').value){
+        e.preventDefault();
+        alert('add entries first');
+      }else{
+        saveEntries();
+      }
+    })
+    document.getElementById('click').addEventListener('click', function(event) {
+
+      var tableName = document.getElementById('tableName').value;
+      var tableCount = document.getElementById('tableCount').value;
+      var tableCapacity = document.getElementById('tableCapacity').value;
+      var tablePrice = document.getElementById('tablePrice').value;
+
+      var newRow = document.createElement('tr');
+      newRow.innerHTML = '<td>' + tableName + '</td><td>' + tableCount + '</td><td>' + tableCapacity + '</td><td>' + tablePrice + '</td>';
+
+      document.getElementById('tableEntries').getElementsByTagName('tbody')[0].appendChild(newRow);
+
+      document.getElementById('tableForm').reset();
+    });
+  </script>
+</body>
+</html>

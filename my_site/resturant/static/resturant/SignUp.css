@@ -1,0 +1,91 @@
+body{
+    background-image: url(https://images.unsplash.com/photo-1461696114087-397271a7aedc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 25px;
+    padding-bottom: 0px;
+}
+.logo{
+    font-family: 'Pacifico';
+    font-weight: 500;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
+    width: 50px;
+    margin-right: 0px;
+}
+.one {
+    align-self: flex-end;
+}
+
+.two {
+    align-self: flex-start;
+}
+.main{
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.Page{
+    font-size: 30px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    color: rgb(187, 187, 250);
+    padding-right: 40%;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 150px;
+    padding-top: 20px;
+    width: 100%;
+    margin-right: 0px;
+}
+.name{
+    width:100%
+}
+.location{
+    width: 100%;
+}
+.Contact{
+    width: 100%;
+}
+.Id{
+    width: 100%;
+}
+.btn.btn-primary{
+    margin-left: 90%;
+    margin-top: 60px;
+    background-color: blueviolet;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(148, 44, 176, 0.5), 0 6px 20px 0 rgba(160, 25, 190, 0.5);
+    transition: all 200ms ease-in-out;
+}
+.btn.btn-primary:hover,.btn.btn-primary:focus{
+    background-color: rgba(216, 40, 216, 0.7);
+}
+.tag{
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 400;
+    font-family: 'Open Sans',sans-serif;
+}
+label{
+    font-size: 15px;
+    color: rgb(2, 2, 2);
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+}
+.form-group.col-md-6{
+    padding-left: 0px;
+}

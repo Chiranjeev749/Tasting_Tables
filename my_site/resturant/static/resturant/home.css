@@ -1,0 +1,163 @@
+body {
+    background-color: #FDE2F3;
+
+}
+
+.heading {
+    font-family: 'Pacifico';
+    font-weight: 500;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 30px;
+    color: rgb(42, 35, 109);
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
+    width: 50px;
+}
+
+.one {
+    align-self: flex-end;
+}
+
+.two {
+    align-self: flex-start;
+}
+
+form .btn {
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: blue;
+    font-weight: 600;
+}
+
+.bg-body-tertiary {
+    background-image: linear-gradient(#E5BEEC, #FDE2F3);
+    border-bottom: 1px solid #E5BEEC;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 400px;
+    background-color: white;
+    box-shadow: #E5BEEC;
+}
+
+.form-control.me-2 {
+    flex-grow: 2;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+form:focus-within {
+    outline: 1px solid blue
+}
+
+.btn.btn-light {
+    box-sizing: border-box;
+    border: 1px solid grey;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tt {
+    font-size: 70px;
+    font-family: 'Caveat';
+    font-weight: 900;
+    color: #2A2F4F;
+    display: flex;
+    justify-content: center;
+    border-bottom: #deb1e6;
+    padding: 35px;
+}
+.restaurants{
+    padding: 20px 35px;
+}
+.check{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Adjust the height as desired */
+    object-fit: cover; /* This ensures the image maintains its aspect ratio within the specified dimensions */
+  }
+  
+
+.btn.btn-link {
+    background-color: #FDE2F3;
+    box-sizing: border-box;
+    border: 2px solid #dba3e4;
+    box-shadow: 0px 10px 10px 0px #d583e2,0px 10px 10px 0px #d583e2;
+    margin: 30px 45px;
+    padding: 0px;
+    transition: all 200ms ease-in-out;
+}
+.btn.btn-link:hover,.btn.btn-link:focus{
+background-color: #d583e2;
+text-decoration: none;
+box-shadow: 0px 20px 20px 0px #d35de6,0px 20px 20px 0px #d35de6;
+}
+.btn.btn-link:active{
+    background-color: #d583e2;
+}
+.card-body{
+    background-color: #FDE2F3;
+}
+.card-title{
+    font-family: 'Open Sans',sans-serif;
+    color: black;
+    font-weight: 700;
+}
+.card-text{
+    color: #2A2F4F;
+}
+
+.footer{
+    margin-top: 25px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: black;
+    padding-top: 35px;
+}
+.footing{
+    font-family: 'Pacifico';
+    font-weight: 500;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
+    width: 50px;
+}
+.aba{
+    font-size: 20px;
+    color: white;
+}
+.abb{
+    font-size: 17px;
+    color:rgb(164, 164, 164)
+}
+
+  

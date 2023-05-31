@@ -1,0 +1,71 @@
+body{
+    background-image: url(https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.logo{
+    font-family: 'Pacifico';
+    font-weight: 500;
+    padding-left: 35px;
+    padding-top: 25px;
+    font-size: 50px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    height: 75px;
+    width: 50px;
+}
+.one {
+    align-self: flex-end;
+}
+
+.two {
+    align-self: flex-start;
+}
+.id{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 200px;
+}
+.input-group{
+    width: 15%;
+    margin-bottom: 10px;
+}
+.form-group{
+    width: 15%;
+    margin-bottom: 10px;
+}
+.bttn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn{
+    box-sizing: border-box;
+    border: 1px solid grey;
+    color:aliceblue ;
+    background-color: black;
+    font-weight: 500;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+.btn:hover,.btn:focus{
+    color: black;
+    background-color: aliceblue;
+}
+.forgot{
+    padding-left: 100px;
+    text-decoration: none;
+    color: beige;
+    border: none;
+    transition:color 200ms ease-in-out;
+}
+.forgot:hover,.forgot:focus{
+    color: aliceblue;
+}
